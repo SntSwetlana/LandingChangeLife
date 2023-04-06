@@ -1,0 +1,140 @@
+.press{
+  padding-top: 88px;
+  padding-bottom: 88px;
+  background-color: var(--light-color);
+
+  &__top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 33px;
+  }
+
+  &__title{
+    margin: 0;
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 27px;
+    line-height: 38px;
+    letter-spacing: 1.2px;
+    color: var(--dark-color);
+  }
+
+  &__link{
+    color: #00413e;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: 0.02px;
+    border: 1px solid rgba(53, 83, 98, 0.2);
+    border-radius: 80px
+
+  }
+
+  &__list{
+    row-gap: var(--offset);
+  }
+
+  &__item{
+    grid-column: 4 span;
+  }
+
+}
+
+.press-card{
+  position: relative;
+  border-top: 1px solid  #00413e;
+  padding-top: 16px;
+  min-height: 145px;
+  min-width: 330px;
+  &__top{
+    display: flex;
+    align-items: center;
+    margin-bottom: 11px;
+    gap: 16px;
+  }
+
+  &__author{
+    margin: -18px 0;
+    padding: 20px 0;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 16px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    padding-left: 32px;
+    background-position: left 15px;
+    background-size: 24px 24px;
+    background-repeat: no-repeat;
+    transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+
+    &--ted{
+      background-image: url("../../img/presss-1.svg");
+    }
+
+    &--cornews{
+      background-image: url("../../img/presss-2.svg");
+    }
+    &--dep{
+      background-image: url("../../img/presss-3.svg");
+    }
+    &--nyt{
+      background-image: url("../../img/presss-4.svg");
+    }
+    &--corrections1{
+      background-image: url("../../img/presss-5.svg");
+    }
+    &--crime{
+      background-image: url("../../img/presss-6.svg");
+    }
+  }
+
+  &__date{
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 16px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: rgba(53, 83, 98, 0.6);
+  }
+
+  &__title{
+    margin: 0;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 25px;
+    color: #00413e;
+    transition: color 0.3s ease-in-out;
+  }
+
+  &__link{
+    color: inherit;
+    transition: color 0.3s ease-in-out;
+
+    &::after{
+      content: "";
+      position: absolute;
+      inset: 0;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    @include hover {
+      color: var(--accent-color);
+    }
+
+    &:active {
+      color: var(--active-color);
+     }
+  }
+
+}
+
+.press-card__link.focus-visible {
+  &::after{
+    outline: 1px solid var(--active-color);
+  }
+}

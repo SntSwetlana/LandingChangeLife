@@ -1,0 +1,46 @@
+.where{
+  margin: 0;
+  padding-top: 155px;
+  padding-bottom: 133px;
+  color: #fafafa;
+  background-color: #001414;
+  &__content{
+    grid-column: 4 span;
+  }
+  &__map{
+    grid-column: 7 / 5 span;
+  }
+
+  &__title{
+    margin: 0;
+    margin-top: 43px;
+    font-family: var(--second-family);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 52px;
+    letter-spacing: 1.2px;
+  }
+
+  &__descr{
+    margin: 0;
+    margin-top: 43px;
+    margin-bottom: 37px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+  }
+  &__btn{
+    margin: 0;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: 0.02px;
+    color: var(--light-color);
+
+    background-color: #00665F;
+    border-radius: 80px;
+  }
+}
