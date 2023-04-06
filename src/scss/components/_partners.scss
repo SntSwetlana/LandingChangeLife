@@ -1,0 +1,62 @@
+.partners{
+  padding: 16px 0;
+  &__container{
+    align-items: center;
+    gap: 6px;
+  }
+
+  &__title{
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 16px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: rgba(53, 83, 98, 0.6);
+  }
+  &__list{
+    display: flex;
+    align-items: center;
+    gap: 13px;
+  }
+  &__item{
+
+  }
+  &__link{
+    &:focus {
+      outline: none;
+    }
+  }
+  &__logo{
+
+  }
+  &__more{
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 16px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: rgba(53, 83, 98, 0.6);
+    transition: color 0.3s ease-in-out;
+
+    &:focus {
+      outline: none;
+    }
+    @include hover {
+      color: var(--accent-color);
+    }
+    &:active {
+      color: var(--active-color);
+    }
+
+  }
+
+}
+
+.partners__more.focus-visible {
+  outline: 1px solid var(--active-color);
+  outline-offset: 3px;
+}
+.partners__link.focus-visible {
+  outline: 1px solid var(--active-color);
+  outline-offset: 3px;
+}
