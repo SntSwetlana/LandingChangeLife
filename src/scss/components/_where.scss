@@ -6,9 +6,17 @@
   background-color: #001414;
   &__content{
     grid-column: 4 span;
+
+    @include small-tablet{
+      margin-bottom: 20px;
+    }
   }
   &__map{
     grid-column: 7 / 5 span;
+
+    @include small-tablet{
+      grid-column: 4 span;
+    }
   }
 
   &__title{
@@ -42,5 +50,8 @@
 
     background-color: #00665F;
     border-radius: 80px;
+  }
+  @include small-tablet{
+    padding: 60px 0;
   }
 }

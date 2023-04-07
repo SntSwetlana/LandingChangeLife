@@ -3,6 +3,11 @@
     padding-top: 112px;
     padding-bottom: 137px;
     background-color: #001414;
+    .container {
+      @include small-tablet{
+        row-gap: var(--offset);
+      }
+    }
   }
 
   &__bottom{
@@ -13,6 +18,10 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+
+      @include small-tablet{
+        flex-direction: column;
+      }
     }
     &-text{
       display: flex;
@@ -24,6 +33,10 @@
     grid-column: 2 span;
     &:last-child{
       grid-column: 11 / 2 span;
+
+      @include small-tablet{
+        grid-column: 2 span;
+      }
     }
   }
   &__title{
@@ -67,6 +80,13 @@
       &:active {
         color: var(--active-color);
       }
+      @include small-tablet{
+        font-size: 14px;
+      }
+    }
+    @include small-tablet{
+      margin-bottom: 20px;
+      flex-direction: column;
     }
   }
   &__copy{
@@ -87,6 +107,14 @@
     line-height: 30px;
     color: #edeceb;
     transition: color 0.3s ease-in-out;
+  }
+  &__logo{
+    @include small-tablet{
+      margin-bottom: 20px;
+    }
+  }
+  @include small-tablet{
+    padding-bottom: 60px;
   }
 }
 

@@ -10,12 +10,20 @@
     line-height: 38px;
     letter-spacing: 1.2px;
     text-align: center;
+    @include small-tablet{
+      font-size: 24px;
+      line-height: 32px;
+    }
   }
   &__list{
     counter-reset: steps;
     justify-content: space-between;
     max-width: 758px;
     margin: auto;
+    @include small-tablet{
+      flex-wrap: wrap;
+      gap: var(--offset);
+    }
   }
   &__item
   {
@@ -60,6 +68,13 @@
         transform: translateY(-50%);
       }
     }
+    @include small-tablet{
+      width: 100%;
+      &::after{
+        display: none;
+      }
+    }
+
     }
 
 
@@ -72,5 +87,9 @@
    line-height: 24px;
    text-align: center;
    color: rgba(53, 83, 98, 0.8);
+  }
+
+  @include small-tablet{
+    padding: 60px;
   }
 }

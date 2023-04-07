@@ -11,9 +11,15 @@
   background-size: cover;
   background-repeat: no-repeat;
 
+  &__container{
+    margin-bottom: var(--offset);
+  }
+
   &__content {
     grid-column: 6 span;
-
+    @include small-tablet{
+      grid-column: 4 span;
+    }
   }
   &__title{
     margin: 0;
@@ -23,6 +29,10 @@
     font-size: 38px;
     line-height: 44px;
     letter-spacing: 1.2px;
+    @include tablet{
+      font-size: 32px;
+      line-height: 40px;
+    }
   }
 
   &__descr {
@@ -45,6 +55,12 @@
     font-weight: 400;
     font-size: 15px;
     line-height: 24px;
+  }
+
+  &__list {
+    @include small-tablet{
+      row-gap: var(--offset);
+    }
   }
 
   &__item{

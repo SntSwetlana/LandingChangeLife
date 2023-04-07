@@ -8,6 +8,10 @@
     align-items: center;
     justify-content: space-between;
     margin-bottom: 33px;
+    @include small-tablet{
+      flex-wrap: wrap;
+      gap: 20px;
+    }
   }
 
   &__title{
@@ -39,7 +43,9 @@
   &__item{
     grid-column: 4 span;
   }
-
+  @include small-tablet{
+    padding: 60px 0;
+  }
 }
 
 .press-card{
